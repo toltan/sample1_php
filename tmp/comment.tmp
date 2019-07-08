@@ -1,0 +1,9 @@
+<hr>
+<ul class="commentarea">
+	<li>!no!.</li>
+	<li>タイトル:!title!</li>
+	<li>お名前:!name!</li>
+	<li>投稿日時:!time!</li>
+	<li>コメント:</li>
+	<li>!comment!</li>
+</ul>

@@ -1,0 +1,7 @@
+<section id="tmp"><p>ログインパスワードを入力してください。</p>
+<form action="bbs.php" method="post">
+	<input type="hidden" name ="mode" value="admin">
+	<input type="text" name="pass" value="" required>
+	<input type="submit" value="認証">
+</form>
+<p><a href="bbs.php">掲示板に戻る</a></p></section>

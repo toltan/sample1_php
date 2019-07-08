@@ -1,0 +1,516 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#background img{
+	width:100%;
+	height: 100%;
+	position:fixed;
+	top:0;
+	z-index: -100;
+}
+#header{
+	background-color: #ffffff;
+	width:1206px;
+	height:130px;
+	margin:80px auto 0;
+}
+#header h1{
+	width:300px;
+	height:80px;
+	line-height: 80px;
+	float: left;
+}
+#header img{
+	overflow: hidden;
+	transition:transform 0.1s linear;
+}
+#header img:hover,footer img:hover{
+	transform: scale(1.1);
+}
+#header img:active,footer img:active{
+	opacity:0.7;
+}
+#header h1 img{
+	margin-left: 50px;
+	vertical-align: middle;
+	animation-duration:2s;
+	animation-name:slider;
+}
+/*nav*/
+nav{
+	clear: both;
+	width:1206px;
+	position: absolute;
+	top:160px;
+}
+.slider{
+	width:300px;
+	float: left;
+	margin-right:2px;
+	background-color:#ffffff;
+	position: relative;
+	z-index: 70;
+	box-shadow: 2px 2px 3px #000;
+}
+.slider:last-child{
+	margin-right: 0;
+}
+.slider ul li{
+	display: block;
+}
+.slider ul li:first-child{
+	cursor: pointer;
+}
+.slider ul li:not(:first-child){
+	display: none;
+}
+.slider ul li{
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+}
+.slider ul li a{
+	text-decoration: none;
+	color: rgba(0,0,0,1.00);
+	transition:color 0.5s linear;
+	transition:font-size 0.1s linear;
+}
+.slider ul li a:hover,footer li a:hover{
+	color:#00C813;
+	font-size:20px;
+}
+
+/*nav end*/
+#humburger{
+	display: none;
+}
+#button{
+	float: right;
+}
+#button li{
+	height: 80px;
+	line-height: 80px;
+	margin-right:48px;
+	float: left;
+	list-style:none;
+	display: table-cell;
+}
+#button li img{
+	vertical-align: middle;
+	background-color:#000000;
+}
+#main_photo{
+	width:1206px;
+	height: 500px;
+	margin: 0 auto 100px;
+	position:relative;
+	overflow: hidden;
+}
+#main_photo li{
+	float: left;
+	position: absolute;
+}
+#main_photo #catchCopy{
+	top:0;
+	bottom: 0;
+	z-index: 10;
+	width:500px;
+	height: 400px;
+	margin: auto 0 auto 50px;
+	font-size: 50px;
+	font-family: "ＭＳ Ｐ明朝", "MS PMincho","ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "serif";
+}
+#main_photo #plus_minus{
+	height: 50px;
+	text-align: center;
+	bottom:0;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+
+}
+#pl li{
+	width: 60px;
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	color:#696969;
+	opacity: 0.5;
+	font-size:12px;
+}
+#pl li.act{
+	opacity:1;
+}
+#prev,#next{
+	height: 200px;
+	top:0;
+	bottom: 0;
+	margin: auto 0;
+	opacity: 0.5;
+	display: none;
+}
+#next{
+	right: 0;
+}
+#prev:hover,#next:hover{
+	opacity: 1;
+}
+#slide_gallery{
+	width:10000px;
+	height:500px;
+	position: relative;
+}
+#slide_gallery li{
+	width:1206px;
+	height: 500px;
+	position: absolute;
+}
+#slide_gallery li:nth-child(2){
+	left: 1206px;
+}
+#slide_gallery li:nth-child(3){
+	left: 2412px
+}
+#main_item{
+	clear: both;
+	margin: 0 auto 100px;
+	width: 1206px;
+	height: 650px;
+	position:relative;
+}
+#main_item li{
+	position:absolute;
+	margin-bottom:100px;
+	list-style: none;
+}
+#main_item li img{
+	display: block;
+}
+#new_item{
+	width:1206px;
+	margin: 0 auto 600px;
+	position: relative;
+}
+#new_item #change_image{
+	width:575px;
+	height: 410px;
+	background-color:#7C7C7C;
+	position: absolute;
+	top: 110px;
+	right: 110px;
+}
+#new_item #change_image img{
+	width:575px;
+	height: 410px;
+}
+#new_item #description{
+	position: absolute;
+	width:360px;
+	height: 410px;
+	top: 110px;
+	left: 110px;
+}
+#new_item #description p:first-child{
+	height: 80px;
+	font-size:2em;
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho","ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "serif";
+}
+#new_item #description p:last-child{
+	height: 330px;
+	font-size: 30px;
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho","ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "serif";
+}
+
+#messa{
+	text-align: center;
+	height: 300px;
+	font-size: 50px;
+	text-shadow:0 0 2px #ffffff,
+				0 0 20px #ffffff,
+				0 0 40px #ffffff,
+				0 0 60px #ffffff,
+				0 0 80px #ffffff,
+				0 0 100px #ffffff;
+	font-family: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	position:fixed;
+	top:0;
+	bottom:0;
+	left: 0;
+	right:0;
+	margin: auto;
+	opacity: 0;
+	z-index: -50;
+}
+footer{
+	background-color:#ffffff;
+	width:1206px;
+	margin: 0 auto;
+}
+footer img{
+	transition:transform 0.1s linear;
+}
+footer li a{
+	color:#000000;
+	text-decoration:none;
+	transition:color 0.5s linear;
+	transition:font-size 0.1s linear;
+}
+footer a:not(:last-child):hover{
+	color:#00C813;
+	font-size:20px;
+}
+footer ul{
+	width:1206px;
+	height: 50px;
+	background-color:#ffffff;
+}
+footer div ul li{
+	position:relative;
+	width:300px;
+	height: 50px;
+	line-height: 50px;
+	margin-right: 2px;
+	list-style:none;
+	float:left;
+	text-align: center;
+	transition:color 0.5s linear;
+	transition:font-size 0.1s linear;
+}
+footer div ul li:last-child{
+	margin-right: 0;
+}
+.sankaku{
+	width:0;
+	height:0;
+	border:5px solid transparent;
+	border-bottom:5px solid #107734;
+	border-right:5px solid #107734;
+	position:absolute;
+	right:5px;
+	bottom:5px;
+}
+@keyframes slider{
+	0%{
+		margin-left:200%;
+		opacity:0;
+	}
+	100%{
+		margin-left: 50px;
+		opacity:1;
+	}
+}
+#fix{
+	position:fixed;
+	bottom:30px;
+	right:30px;
+	width: 50px;
+	height: 50px;
+	overflow: visible;
+	cursor:pointer;
+}
+#fix img{
+	width:50px;
+	height:50px;
+	opacity: 0.7;
+}
+#fix img:hover{
+	opacity: 1;
+}
+#main{
+	width:1206px;
+	background-color:#ffffff;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+#content{
+	width: 1206px;
+	margin: 0 auto;
+	background-color:#ffffff;
+}
+h2{
+	clear: both;
+	margin-left: 53px;
+	padding-left: 1em;
+	border-left:8px solid green;
+	box-sizing: border-box;
+	height:50px;
+	line-height: 50px;
+}
+#breadcrumb{
+	margin-top:10px;
+	margin-left: 53px;
+	height: 50px;
+	line-height: 50px;
+}
+#breadcrumb li{
+	float: left
+}
+#breadcrumb li::after{
+	content: ">";
+	margin:0 1em;
+}
+#breadcrumb li:last-child::after{
+	content: "";
+}
+/*お問い合わせ　始*/
+#contact > p{
+	clear: both;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	margin-left: 53px;
+}
+table{
+	width:1100px;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+tr,th,td{
+	width:300px;
+	height: 50px;
+	font-size:16px;
+	border: 1px solid;
+	box-sizing: border-box;
+	padding:0 10px;
+}
+table th{
+	width:400px;
+}
+table td{
+	width:700px;
+}
+table input[type="text"],table select{
+	width:300px;
+	height: 30px;
+	vertical-align:middle;
+	font-size: 18px;
+	letter-spacing: 4px;
+}
+table input[type="email"]{
+	width:600px;
+	height: 30px;
+	vertical-align:middle;
+	font-size: 18px;
+	letter-spacing: 4px;
+}
+table label{
+	margin-right: 1em;
+}
+table p{
+	height: 40px;
+	line-height: 40px;
+}
+table textarea{
+	width:680px;
+	height: 300px;
+	display: block;
+	margin: 8px 0;
+	font-size: 20px;
+	letter-spacing: 4px;
+}
+table #comment{
+	width:680px;
+	height: 150px;
+	display: block;
+	margin: 8px 0;
+	font-size: 20px;
+	letter-spacing: 4px;
+}
+table th:last-child{
+	border: none;
+}
+table input[type="submit"],table input[type="button"]{
+	width:80px;
+	height: 30px;
+	border-radius: 6px;
+	background-color:#ffffff;
+}
+/*お問い合わせ　終*/
+/*掲示板*/
+.commentarea{
+	margin: 0 53px;
+	background-color:#B6D6D0;
+}
+.commentarea li{
+	height: auto;
+}
+#tmp{
+	margin: 0 53px;
+}
+#tmp p{
+	height: 40px;
+	line-height:40px;
+}
+#tmp table th{
+	background-color: #B6D6D0;
+}
+#tmp table td{
+	text-align: center;
+}
+#tmp input[type="submit"]{
+	width:40px;
+}
+#image_change{
+	margin: 0 53px;
+}
+#image_change p{
+	height: 40px;
+	line-height:40px;
+}
+#image_change #image_file{
+	width:100%;
+	height: 100%;
+}
+#new_image{
+	height: 100px
+}
+#new_image li{
+	width:100px;
+	height: 100px;
+	float: left;
+	border:1px solid;
+	margin-right: 40px;
+	position: relative;
+}
+#new_image li:nth-child(2){
+	width:30px;
+	line-height: 100px;
+	text-align: center;
+	border: none;
+}
+#new_image li:last-child{
+	border: none;
+}
+#image_change input{
+	display: block;
+	margin-bottom: 8px;
+	height: 40px;
+	width: 500px;
+	font-size: 1.2em;
+}
+#new_discription{
+	clear: both;
+	margin: 24px 0;
+}
+#new_discription textarea{
+	width:500px;
+	height:300px;
+	font-size: 1.6em;
+}
+#image_change input[type="submit"]{
+	width:auto;
+}
+#file_div{
+	height: 37px;
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	margin: auto 0;
+}
+/*掲示板　終*/

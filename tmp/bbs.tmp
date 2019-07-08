@@ -1,0 +1,25 @@
+<p>当店のホームページにアクセスしていただきありがとうございます。</p>
+<p>ご意見、ご感想等ありましたらお気軽に下記の掲示板にご投稿ください。</p>
+<form action="bbs.php" method="post">
+	<input type="hidden" name="mode" value="post">
+	<table>
+		<tr>
+			<th><label for="title">タイトル</label></th>
+			<td><input type="text" name="title" id="title" value="管理"></td>
+		</tr>
+		<tr>
+			<th><label for="text">お名前</label></th>
+			<td><input type="text" name="name" id="text" value="管理人"></td>
+		</tr>
+		<tr>
+			<th><label for="comment">コメント</label></th>
+			<td><textarea name="comment" id="comment" required>テスト</textarea></td>
+		</tr>
+		<tr>
+			<th colspan="2"><input type="submit" name="sub" value="投稿する"></th>
+		</tr>
+	</table>
+</form>
+<p>コメント一覧</p>
+!message!
+<p><a href="bbs.php?mode=admin">コメント管理用</a></p>

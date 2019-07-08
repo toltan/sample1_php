@@ -1,0 +1,22 @@
+	<section id="image_change">
+		<form action="image_change.php" method="post" enctype="multipart/form-data">
+			<p>新商品の画像：!image_name!</p>
+			<ul id="new_image">
+				<li><img src="!img_src!" alt="新商品" id="image_file"></li>
+				<li>→</li>
+				<li></li>
+				<li><div id="file_div"><input type="file" name="file" id="file"></div></li>
+			</ul>
+			<ul id="new_discription">
+				<li><label for="new_text">新商品名</label></li>
+				<li><input type="text" name="new_name" id="new_text" value="!new_name!" required></li>
+				<li>新商品説明文</li>
+				<li><textarea name="new_text" required>!new_text!</textarea></li>
+			</ul>
+			<input type="hidden" name="mode" value="image_change">
+			<input type="submit" value="変更確定">
+		</form>
+		<form action="image_change.php" method="post">
+			<input type="submit" name="logout" value="ログアウト">
+		</form>
+	</section>			

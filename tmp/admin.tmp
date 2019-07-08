@@ -1,0 +1,25 @@
+<section id="tmp">
+	<p>削除する記事のチェックボックスにチェックを入れた後、削除ボタンを押してください。</p>
+	<form action="bbs.php" method="post">
+		<input type="hidden" name ="mode" value="admin">
+		<input type="hidden" name ="pass" value="!pass!">
+		<p><input type="submit" value="削除"></p>
+		<table>
+			<thead>
+				<tr>
+					<th>削除</th>
+					<th>No</th>
+					<th>お名前</th>
+					<th>IP</th>
+					<th>タイトル</th>
+					<th>投稿日時</th>
+					<th>コメント</th>
+				</tr>
+			</thead>
+			<tbody>
+			!tbody!
+			</tbody>
+		</table>
+	</form>
+	<p><a href="bbs.php">掲示板に戻る</a></p>
+</section>
