@@ -56,7 +56,7 @@ echo <<< _ECHO_
 				<tr>
 					<th colspan="2">
 						<input type="submit" value="送信">
-						<input type="button" value="戻る" onclick="history.back()"
+						<input type="button" value="戻る" onclick="history.back()">
 					</th>
 				</tr>
 			</table>
