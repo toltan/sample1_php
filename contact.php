@@ -23,7 +23,7 @@ $_SESSION["textarea"] =$textarea;
 		<h2>お問い合わせ内容の確認</h2>
 		<ul id="breadcrumb">
 			<li><a href="index.php">ホーム</a></li>
-			<li><a href="contact.html">お問い合わせ</a></li>
+			<li><a href="contact.php">お問い合わせ</a></li>
 			<li>お問い合わせ内容の確認</li>
 		</ul>
 	</sectin>
