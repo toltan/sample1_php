@@ -10,6 +10,10 @@
 </head>
 
 <body id="bod">
+<?php
+    ini_set("display_errors", 1);
+    error_reporting(E_ALL);
+ ?>
 <div id="fix"><img src="images/top1.png"></div>
 	<div id="humburger">
 		<span id="top"></span>
