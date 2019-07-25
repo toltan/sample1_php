@@ -24,7 +24,7 @@
 	<h1><a href="index.php"><img src="images/logo.gif" alt="ロゴ"></a></h1>
 	<ul id="button">
 		<li><a href="#"><img src="images/mail_magazin.gif" alt="メルマガ登録"></a></li>
-		<li><a href="contact.php"><img src="images/contact_button.gif" alt="お問い合わせ"></a></li>
+		<li><a href="contact.html"><img src="images/contact_button.gif" alt="お問い合わせ"></a></li>
 	</ul>
 	<nav>
 		<ul>
