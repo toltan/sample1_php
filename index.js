@@ -100,4 +100,5 @@ $(function(){
 			$('#messa:not(:animated)').css('opacity','0');
 		}
 	});
+	$(<img src="images/back_ground1.jpg">);
 });
