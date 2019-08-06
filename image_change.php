@@ -14,7 +14,7 @@
 	}
 	$img = new Image;
 	$err = "";
-	if($_SESSION["pass"] == hash("sha256",7974)){
+	if($_SESSION["pass"] == hash("sha256",7974)){//
 		if($_FILES['file']['name']){
 			$err = $img->type_check();
 			if(empty($err)){

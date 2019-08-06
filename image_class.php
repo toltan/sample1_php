@@ -48,7 +48,7 @@ class Image{
 				list($src,$name,$text) = explode(",",$img_get);
 				if($name != $in["new_name"] || $text != $in["new_text"]){
 					$new_image = "$src,".$in["new_name"].",".$in["new_text"];
-					echo("$new_image");
+					//echo("$new_image");
 					rewind($img_data_open);
 					fwrite($img_data_open,$new_image);
 					ftruncate($img_data_open,ftell($img_data_open));
