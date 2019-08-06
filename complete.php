@@ -7,7 +7,7 @@ $check = $_SESSION["che"];
 $textarea = $_SESSION["textarea"];
 mb_language("japanese");
 mb_internal_encoding("UTF-8");
-$to = "resistance-to-fate.sg@ezweb.ne.jp";
+$to = "forest_comp@example.ne.jp";
 $subject = "フォームから連絡があります。";
 $send_mail = mb_send_mail($to,$subject,$textarea,$email);
 if($send_mail){
