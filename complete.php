@@ -14,6 +14,7 @@ if($send_mail){
 	$h2Content = "送信完了";
 	$message = "送信完了しました。<a href='index.html'>ホームに戻る</a>";
 }else{
+	echo($send_mail);
 	$h2Content = "送信失敗";
 	$message = "送信に失敗しました。お手数ですが再度送信してください。";
 }

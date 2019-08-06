@@ -134,7 +134,6 @@
 					$liner[0] -= $c;
 					if($q === 0){
 						$q = $liner[0];
-
 					}
 					$line = implode(",",$liner);
 					array_push($data_undel,$line);
@@ -151,7 +150,6 @@
 				fwrite($data_open,$q);
 				ftruncate($data_open,ftell($data_open));
 				fclose($data_open);
-
 			}
 
 			$csv_str = "";
@@ -184,7 +182,7 @@ per;
 			$temp_read = fread($temp_open,$temp_size);
 			fclose($temp_open);
 			$temp_read = str_replace("!tbody!",$csv_str,$temp_read);
-			$temp_read = str_replace("!pass!","1234",$temp_read);
+			$temp_read = str_replace("!pass!","7974",$temp_read); //
 			echo($temp_read);
 			exit;
 		}
