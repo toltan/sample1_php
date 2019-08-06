@@ -1,8 +1,5 @@
 //ハンバーガーメニュー 共用
 $(function(){
-
-	$(<img src="images/back_ground1.jpg">);
-
 	if($('#slide_gallery').length){
 		$('#slide_gallery li').each(function(){
 			$('#pl').append($('<li>●</li>').attr('data-img',$('img',this).attr('src')));
