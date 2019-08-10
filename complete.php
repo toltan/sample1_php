@@ -12,7 +12,7 @@ require 'vendor/autoload.php';
 $grid_email = new \SendGrid\Mail\Mail();
 $grid_email->setFrom($email, $name);
 $grid_email->setSubject("フォームから連絡があります。");
-$grid_email->addTo("resistance-to-fate.sg@ezweb.ne.jp", "受信者");
+$grid_email->addTo("forest_comp@example.co.jp", "受信者");
 $grid_email->addContent("text/plain", $textarea);
 $send_grid = new \SendGrid(getenv('SENDGRID_API_KEY'));
 try{
