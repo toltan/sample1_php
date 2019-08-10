@@ -7,14 +7,13 @@ $check = $_SESSION["che"];
 $textarea = $_SESSION["textarea"];
 mb_language("japanese");
 mb_internal_encoding("UTF-8");
-$to = "forest_comp@example.ne.jp";
+$to = "resistance-to-fate.sg@ezweb.ne.jp";
 $subject = "フォームから連絡があります。";
 $send_mail = mb_send_mail($to,$subject,$textarea,$email);
 if($send_mail){
 	$h2Content = "送信完了";
 	$message = "送信完了しました。<a href='index.html'>ホームに戻る</a>";
 }else{
-	echo("<p>failed"." send email</p>");
 	$h2Content = "送信失敗";
 	$message = "送信に失敗しました。お手数ですが再度送信してください。";
 }
