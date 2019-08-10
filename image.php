@@ -7,8 +7,12 @@
 		date_default_timezone_set("Asia/Tokyo");
 		encode();
 		if($bbs_val["mode"] == "post"){add_data();}//データがあればデータナンバーが1プラスされる
-		else if($bbs_val["mode"] == "admin"){admin();}
-		call_bbs();
+		else if($bbs_val["mode"] == "admin"){
+			!isset($bbs_val["pass"]) ? 	check_pass() : admin();
+		}
+		if(!isset($bbs_val["mode"]) || $bbs_val["mode"] == "post"){
+			call_bbs();
+		}
 
 		function encode(){//encoding
 			global $bbs_val;
@@ -184,7 +188,7 @@ per;
 			$temp_read = str_replace("!tbody!",$csv_str,$temp_read);
 			$temp_read = str_replace("!pass!","7974",$temp_read); //
 			echo($temp_read);
-			exit;
+			//exitをすると、以降のhtmlの読み込みすら止まってしまう
 		}
 		function check_pass(){
 			global $bbs_val,$tmp_dir,$pass;
@@ -194,10 +198,10 @@ per;
 				$pass_read = fread($pass_open,$pass_size);
 				fclose($pass_open);
 				echo($pass_read);
-				exit;
 			}
 			elseif(hash("sha256",$bbs_val["pass"]) != $pass){
 				error("＊パスワードが正しくありません。");
 			}
+			//exitをすると、以降のhtmlの読み込みすら止まってしまう
 		}
 	?>

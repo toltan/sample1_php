@@ -1,4 +1,4 @@
-<section id="tmp">
+<div id="tmp">
 	<p>削除する記事のチェックボックスにチェックを入れた後、削除ボタンを押してください。</p>
 	<form action="bbs.php" method="post">
 		<input type="hidden" name ="mode" value="admin">
@@ -22,4 +22,4 @@
 		</table>
 	</form>
 	<p><a href="bbs.php">掲示板に戻る</a></p>
-</section>
+</div>

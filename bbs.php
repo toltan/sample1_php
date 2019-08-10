@@ -1,5 +1,4 @@
 <?php include("header.php") ?>
-
 <main id="main">
 	<section id="content">
 		<h2><?php
@@ -16,9 +15,7 @@
 		</ul>
 	</section>
 	<section id="contact">
-
-<?php include("image.php"); ?>
-
+	<?php include("image.php"); ?>
 	</section>
 </main>
 
