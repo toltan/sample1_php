@@ -1,6 +1,7 @@
 {
 	"require" : {
 		"php" : " 7.2.20",
-		"ext-mbstring" : "*"
+		"ext-mbstring" : "*",
+		"sendgrid/sendgrid": "~7"
 	}
 }

@@ -7,6 +7,25 @@ $check = $_SESSION["che"];
 $textarea = $_SESSION["textarea"];
 mb_language("japanese");
 mb_internal_encoding("UTF-8");
+
+require 'vendor/autoload.php';
+$grid_email = new \SendGrid\Mail\Mail();
+$grid_email->setFrom($email, $name);
+$grid_email->setSubject("フォームから連絡があります。");
+$grid_email->addTo("forest_comp@example.ne.jp", "受信者");
+$grid_email->addContent("text/plain", $textarea);
+$send_grid = new \SendGrid(getnv('SEND_API_KEY'));
+try{
+	$response = $send_grid->send($grid_email);
+	print $response->statusCode() . "\n";
+	print_r($response->headers());
+	print $response->body(); . "\n";
+}catch(Exception $e){
+	echo 'Caught exception: '. $e->getMessage() . "\n";
+}
+//herokuではmb_send_mailが使えない
+
+/*
 $to = "forest_comp@example.ne.jp";
 $subject = "フォームから連絡があります。";
 $send_mail = mb_send_mail($to,$subject,$textarea,$email);
@@ -16,7 +35,7 @@ if($send_mail){
 }else{
 	$h2Content = "送信失敗";
 	$message = "送信に失敗しました。お手数ですが再度送信してください。";
-}
+}*/
 ?>
 
 <?php include("header.php") ?>
